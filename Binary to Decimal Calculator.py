@@ -1,3 +1,6 @@
+#import a color library for easteregg
+from colorama import init, Back as bk , Fore as fr
+init()
 #Variable to store data into
 DEFAULT_BASE = 2
 binNum = ""
@@ -21,26 +24,23 @@ def requestInput():
 def reverse(str):
     return str[::-1]
 
-#defined a small easter egg
+#defined a small colorful easter egg
 def surprise(int):
     if int == 3:
-        print()
-        print("Jeez put something that makes sense!")
-        print()
+        print(bk.GREEN + "Jeez put something that makes sense!")
+        print(bk.RESET)
     elif int == 5:
-        print()
-        print("It's free real estate!")
-        print()
+        print(fr.RED + "It's free real estate!")
+        print(fr.RESET)
     elif int == 10:
-        print()
-        print("Wow, we have a badass over here!")
-        print()
+        print(bk.RED + fr.WHITE + "Wow, we have a badass over here!")
+        print(bk.RESET + fr.RESET)
     elif int == 15:
-        print()
-        print("You do realise that you are wasting your own time right?")
-        print()
+        print(bk.CYAN + "You do realise that you are wasting your own time right?")
+        print(bk.RESET, fr.RESET)
     elif int > 15:
-        print("Don't you have something else to do??")
+        print(bk.WHITE + fr.LIGHTBLACK_EX + "Don't you have something else to do??")
+        print(bk.RESET, fr.RESET)
     return
 
 begin()
@@ -68,6 +68,7 @@ while not Stop:
         else:
             binNum += "1"
             number = 0
+            easterEgg = 0
             proceed = False
             Stop = False
             print("In binary the decimal number, " + response + ", is " + reverse(binNum))
