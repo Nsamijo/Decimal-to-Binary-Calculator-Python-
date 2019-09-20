@@ -49,7 +49,7 @@ while not Stop:
 #loop till the user inputs a decimal number, user is also allowed to give no input
     while proceed == False:
         response = requestInput()
-        if not (response.isalpha()) and (response != ""):
+        if response.isdigit() and not (response == ""):
             number = int(response)
             proceed = True
         elif response == "Exit" or response == "exit":
