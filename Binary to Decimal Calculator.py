@@ -1,5 +1,6 @@
 #import a color library for easteregg
 from colorama import init, Back as bk , Fore as fr
+#initialize the colorama library
 init()
 #Variable to store data into
 DEFAULT_BASE = 2
@@ -25,20 +26,20 @@ def reverse(str):
     return str[::-1]
 
 #defined a small colorful easter egg
-def surprise(int):
-    if int == 3:
+def surprise(easterEgg):
+    if easterEgg == 3:
         print(bk.GREEN + "Jeez put something that makes sense!")
         print(bk.RESET)
-    elif int == 5:
+    elif easterEgg == 5:
         print(fr.RED + "It's free real estate!")
         print(fr.RESET)
-    elif int == 10:
+    elif easterEgg == 10:
         print(bk.RED + fr.WHITE + "Wow, we have a badass over here!")
         print(bk.RESET + fr.RESET)
-    elif int == 15:
+    elif easterEgg == 15:
         print(bk.CYAN + "You do realise that you are wasting your own time right?")
         print(bk.RESET, fr.RESET)
-    elif int > 15:
+    elif easterEgg > 15:
         print(bk.WHITE + fr.LIGHTBLACK_EX + "Don't you have something else to do??")
         print(bk.RESET, fr.RESET)
     return
